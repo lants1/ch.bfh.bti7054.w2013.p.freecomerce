@@ -1,1 +1,49 @@
 <?php
+
+// Task 4.3 Quick and Dirty muss sowiso noch neuimplementiert werden via. DB
+$products[0]['product_id'] = 1;
+$products[0]['name'] = "Noir d'Orange";
+$products[0]['cat_id'] = 1;
+$products[0]['herkunft'] = "China";
+$products[0]['preis'] = 2.80;
+
+$products[1]['product_id'] = 2;
+$products[1]['name'] = "Supreme-darjeeling";
+$products[1]['cat_id'] = 1;
+$products[1]['herkunft'] = "China";
+$products[1]['preis'] = 8.39;
+
+$products[2]['product_id'] = 3;
+$products[2]['name'] = "Pai-mu-tan";
+$products[2]['cat_id'] = 1;
+$products[2]['herkunft'] = "Sri-Lanka";
+$products[2]['preis'] = 2.40;
+
+if(isset($_GET[ 'cat_id' ])){
+	// Listenüberischt der Kategorie
+	foreach ($products AS $product){
+		if($product['cat_id'] == $_GET[ 'cat_id' ]){
+			echo "<br>";
+			echo "<b>".$product['herkunft']."</b><br>";
+			echo "<a href='".$_SERVER['PHP_SELF']."?product_id=".$product['product_id']."'>".$product['name']."</a><br>";
+		}
+	}
+}
+else if(isset($_GET[ 'product_id' ])){
+	// Produktübersicht
+	// Mit @ könnte Notiz abgestellt werden...
+	foreach ($products AS $product){
+		if($_GET[ 'product_id' ] == $product['product_id']){
+			echo "<h1>".$product['name']."</h1>";
+			echo $product['herkunft'];
+			echo $product['preis'];
+		}
+	}
+
+}
+else{
+	// Sollte nicht passieren
+	echo "Kein Inhalt definiert...";
+}
+
+?>

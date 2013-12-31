@@ -11,7 +11,7 @@
 			<div class="content">
 			<img src="gfx/zateeo_logo.png" alt="Zateeo Logo" class="left"/>
 			<div style="float:right;">
-				<a href="shoppingchart.html"><img src="gfx/cart.png" alt="Warenkorb"/></a>
+				<a href="html/shoppingchart.html"><img src="gfx/cart.png" alt="Warenkorb"/></a>
 			</div>
 			</div>
 		</div>

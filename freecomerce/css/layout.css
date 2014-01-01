@@ -80,6 +80,18 @@ html, body {
 	padding-bottom: 200px;
 }
 
+
+.nav-page {
+	z-index: 2;
+	background-color: green;
+}
+
+.current-nav-page {
+	z-index: 2;
+	background-color: pink;
+}
+
+
 .advertisement {
 	width: 90%;
 	height: 130px;

@@ -1,3 +1,3 @@
 <?php
-echo "Hier könnte Ihre Werbung stehen..."
+echo $text[0][$languageSetting];
 ?>

@@ -1,3 +1,6 @@
+<?php 
+include_once ('php/language.php');
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,6 +15,7 @@
 			<img src="gfx/zateeo_logo.png" alt="Zateeo Logo" class="left"/>
 			<div style="float:right;">
 				<a href="html/shoppingchart.html"><img src="gfx/cart.png" alt="Warenkorb"/></a>
+				<?php languageChangeDialog();?>
 			</div>
 			</div>
 		</div>

@@ -4,15 +4,15 @@
 ?>
 <h1>Bestellung abschliessen</h1>
 <p>
-<form id="form-definitiv" action='<?php $_SERVER['PHP_SELF']?>' onsubmit="return confirm('Sie kaufen hiermit die Produkte definitiv sind sie sicher dass Sie die Bestellung abschliessen möchten?')">
+<form id="form-definitiv" action='<?php $_SERVER['PHP_SELF']?>' onsubmit="javascript:return validateForm();">
 <p>
-Vorname:<input type="text" name="firstname"><br>
+Vorname:<input type="text" name="firstname" id="firstname"><br>
 </p><p>
-Nachname:<input type="text" name="lastname"><br>
+Nachname:<input type="text" name="lastname" id="lastname"><br>
 </p><p>
 Adresse:<textarea name="address" cols="50" rows="3"></textarea>
 </p><p>
-EMail:<input type="text" name="email"><br>
+EMail:<input type="text" name="email" id="email"><br>
 </p><p>
 Land:
 <input type='radio' name='country' value='CH'> CH 

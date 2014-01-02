@@ -7,6 +7,7 @@ include_once ('php/language.php');
 <meta charset="UTF-8">
 <title>Zateeo Webshop</title>
 <link rel="stylesheet" type="text/css" href="css/layout.css" />
+<script type="text/javascript" src="js/validation.js"></script>
 </head>
 <body>
 	<div class="content">

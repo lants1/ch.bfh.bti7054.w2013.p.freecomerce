@@ -32,10 +32,7 @@ include_once ('php/language.php');
 			</div>
 		</div>
 		<div class="content">
-		<p>
 			<?php include("php/content.php"); ?>
-			<a href="javascript:HColor('red');">Change Color DHTML gedöns...</a>
-			</p>
 		</div>
 		<div class="bottom_block_adv advertisement">
 			<div class="content">

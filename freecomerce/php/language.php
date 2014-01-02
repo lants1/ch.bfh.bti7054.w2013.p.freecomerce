@@ -7,6 +7,11 @@ $languageSetting = 'de';
 // konkretes setzen der Sprachsettings durch das hohlen des Parameters..
 if(isset($_GET[ 'lang' ])){
 	$languageSetting = $_GET[ 'lang' ];
+	// setzen des cookies
+	setcookie("languageSetting", $languageSetting, time()+3600);
+}
+else if (isset($_COOKIE['languageSetting'])){
+	$languageSetting = $_COOKIE['languageSetting'];
 }
 
 // 2D Array für die internationalisierten Texte...

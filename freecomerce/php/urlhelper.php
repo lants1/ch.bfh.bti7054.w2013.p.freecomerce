@@ -3,10 +3,17 @@
 
 // Wechsle den getParameter vom übergebenen Feld
 function anotateUrlWithParameters($field) {
+	$url = $_SERVER ['PHP_SELF'];
+	$url = addParam ( $url, "dummy", "blabla", "?" );
+	
 	if (isset ( $attr ["cat_id"] )) {
 		$cat_id = $attr ["cat_id"];
 	} else {
 		$cat_id = getParam ( "cat_id", 1 );
+	}
+	
+	if (!isset ( $attr ["chart"] )) {
+		$url = addParam ( $url, "chart", "true" );
 	}
 	
 	if (isset ( $attr ["product_id"] )) {
@@ -20,9 +27,6 @@ function anotateUrlWithParameters($field) {
 	} else {
 		$languageSetting = getParam ( "lang", "de" );
 	}
-	
-	$url = $_SERVER ['PHP_SELF'];
-	$url = addParam ( $url, "dummy", "blabla", "?" );
 	$url = addParam ( $url, "cat_id", $cat_id );
 	$url = addParam ( $url, "product_id", $product_id );
 	$url = addParam ( $url, "lang", $languageSetting );

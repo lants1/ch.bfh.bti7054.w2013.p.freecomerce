@@ -19,7 +19,11 @@ $products[2]['cat_id'] = 1;
 $products[2]['herkunft'] = "Sri-Lanka";
 $products[2]['preis'] = 2.40;
 
-if(isset($_GET[ 'cat_id' ])){
+if(isset($_GET[ 'chart' ])){
+	// Warenkorb
+	include_once 'php/chart.php';
+}
+else if(isset($_GET[ 'cat_id' ])){
 	// Listenüberischt der Kategorie
 	foreach ($products AS $product){
 		if($product['cat_id'] == $_GET[ 'cat_id' ]){
@@ -37,10 +41,12 @@ else if(isset($_GET[ 'product_id' ])){
 			echo "<h1>".$product['name']."</h1>";
 			echo $product['herkunft'];
 			echo $product['preis'];
+			echo "<a href='".anotateUrlWithParameters(array ("chart"=>"true"))."'>Buy now;)</a>";
 		}
 	}
 
 }
+
 else{
 	// Sollte nicht passieren
 	echo "Kein Inhalt definiert...";

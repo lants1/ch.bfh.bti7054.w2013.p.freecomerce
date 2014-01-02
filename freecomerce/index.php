@@ -27,7 +27,7 @@ include_once ('php/language.php');
 			<?php include("php/nav.php"); ?>
 			</div>
 		</div>
-		<div class="maincontent">
+		<div class="content">
 			Inhalt
 			<?php include("php/content.php"); ?>
 		</div>

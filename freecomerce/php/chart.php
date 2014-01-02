@@ -1,26 +1,29 @@
+<h1>Warenkorb</h1>
+<p>
+<form action='<?php $_SERVER['PHP_SELF']?>'>
+<h3>Eingekauft</h3>
 <?php
-
-echo "<h1>Warenkorb</h1>";
-echo "<form action='finishShopping.php'>";
-echo "<p>";
-echo "<h3>Eingekauft</h3>";
 	foreach ($products AS $product){
 		if($_GET[ 'product_id' ] == $product['product_id']){
 			echo $product['name']."</br>";
-			echo $product['preis']."</br></br>";;
+			echo $product['preis']."</br></br>";
 		}
 	}
-echo "</p>";
-echo "<p>Zahlungsweise</p>";
-echo "<p>";
-echo "<input type='radio' name='paymethod' value='Mastercard'> Mastercard<br>";
-echo "<input type='radio' name='paymethod' value='Visa'> Visa";
-echo "</p>";
-echo "<p>Zusatzoptionen</p>";
-echo "<p>";
-echo "<input type='checkbox' name='additionalSettings' value='express'> Express Lieferung<br>";
-echo "<input type='checkbox' name='additionalSettings' value='gift'> Verpackt als Geschenk<br>";
-echo "<input type='checkbox' name='additionalSettings' value='gutschein'> Gutschein einlösen";
-echo "</p>";
-echo "</form>";
-?>
+	?>
+<p>Zahlungsweise</p>
+<p>
+<input type='radio' name='paymethod' value='Mastercard'> Mastercard<br>
+<input type='radio' name='paymethod' value='Visa'> Visa
+</p>
+<p>Zusatzoptionen</p>
+<p>
+<input type='checkbox' name='additionalSettings' value='Express Lieferung'> Express Lieferung<br>
+<input type='checkbox' name='additionalSettings' value='Verpackt als Geschenk'> Verpackt als Geschenk<br>
+<input type='checkbox' name='additionalSettings' value='Gutschein'> Gutschein einlösen
+</p>
+<p>
+<input type="hidden" name="finished" value="finished">
+<input type='submit' value='Bestellen'>
+</p>
+</form>
+</p>

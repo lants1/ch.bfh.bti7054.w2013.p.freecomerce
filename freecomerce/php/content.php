@@ -23,6 +23,14 @@ if(isset($_GET[ 'chart' ])){
 	// Warenkorb
 	include_once 'php/chart.php';
 }
+else if(isset($_GET[ 'finished' ])){
+	// Bestellung abschliessen
+	include_once 'php/finishShopping.php';
+}
+else if(isset($_GET[ 'confirmed' ])){
+	// Bestellung abschliessen
+	include_once 'php/confirmed.php';
+}
 else if(isset($_GET[ 'cat_id' ])){
 	// Listenüberischt der Kategorie
 	foreach ($products AS $product){

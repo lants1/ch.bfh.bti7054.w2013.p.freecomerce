@@ -4,7 +4,7 @@
 ?>
 <h1>Bestellung abschliessen</h1>
 <p>
-<form action='<?php $_SERVER['PHP_SELF']?>'>
+<form id="form-definitiv" action='<?php $_SERVER['PHP_SELF']?>' onsubmit="return confirm('Sie kaufen hiermit die Produkte definitiv sind sie sicher dass Sie die Bestellung abschliessen möchten?')">
 <p>
 Vorname:<input type="text" name="firstname"><br>
 </p><p>

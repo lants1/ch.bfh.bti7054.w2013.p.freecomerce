@@ -14,6 +14,7 @@
 		public function removeProduct($product) {
 			$arr = array_diff($this->products, array($product));
 			$this->products = $arr;
+			$this->size--;
 		}
 		
 		public function getProducts() {

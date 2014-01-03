@@ -1,4 +1,5 @@
 <?php
+include_once ('php/loadclasses.php');
 include_once ('php/language.php');
 ?>
 <!DOCTYPE html>

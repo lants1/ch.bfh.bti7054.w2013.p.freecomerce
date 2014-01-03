@@ -2,9 +2,21 @@
 
 require("lib/fpdf17/fpdf.php");
 
+//Task 11 Rest Service Aufruf für Bitcoins inklusive Parsen der JSON Response...
+$url = "https://api.bitcoinaverage.com/exchanges/CHF";
+$response = file_get_contents($url);
+$jsonresponse = json_decode($response,true);
+
+// Task 12.4 Pdf Bestellbestätigung generieren...
 $pdf=new FPDF();
 $pdf->AddPage();
+$title='Order confirmation';
+$pdf->SetTitle($title);
 $pdf->SetFont("Arial","B",16);
-$pdf->Cell(40,10,"Bestellbestätigung");
+$pdf->Cell(40,10,"Order confirmation:");
+$pdf->Ln(10);
+$pdf->SetFont("Arial","B",12);
+$pdf->Cell(40,10,"Aktueller Bitcoin/CHF Wechselkurs: ".$jsonresponse["localbitcoins"]["rates"]["ask"]);
 $pdf->Output();
+
 ?>

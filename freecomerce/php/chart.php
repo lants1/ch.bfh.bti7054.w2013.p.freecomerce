@@ -7,7 +7,7 @@ if (isset ( $_SESSION ['login'] )) {
 			$cart [] = $_GET ['product_id'];
 			$_SESSION ['chart'] = $cart;
 		}
-	// Dem Warenkorb ein Item hinzufügen
+	// Item aus dem Warenkorb löschen...
 	} else if (isset ($_GET['todelete'])){
 		if(isset ( $_GET ['product_id'] )){
 			if(($key = array_search($_GET ['product_id'],  $_SESSION ['chart'])) !== false) {
@@ -16,7 +16,7 @@ if (isset ( $_SESSION ['login'] )) {
 		}
 	}
 	
-	
+	// Dem Warenkorb ein Item hinzufügen
 	else if (isset ( $_GET ['product_id'] )) {
 			if (! in_array ( $_GET ['product_id'], $_SESSION ['chart'] )) {
 				$_SESSION ['chart'] [] = $_GET ['product_id'];

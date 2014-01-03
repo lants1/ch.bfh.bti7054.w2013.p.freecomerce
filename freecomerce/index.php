@@ -1,6 +1,7 @@
 <?php
 include_once ('php/loadclasses.php');
 include_once ('php/language.php');
+include_once ('php/readXmlConfig.php')
 ?>
 <!DOCTYPE html>
 <html>
@@ -27,7 +28,7 @@ include_once ('php/language.php');
 		<div class="background navigation"></div>
 		<div class="left_block navigation">
 			<div class="content">
-				<span id="blink" style="visibility: visible;"> Navigation </span>
+				<span id="<?php if($xml->blink=="true") {echo "blink";};?>" style="visibility: visible;">Navigation </span>
 			<?php include("php/nav.php"); ?>
 			</div>
 		</div>

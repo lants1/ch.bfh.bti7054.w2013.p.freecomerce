@@ -37,6 +37,6 @@ Die Lieferung wird an folgende <?php echo $country?>-Adresse geliefert:
 <br>
 Bezahlungsart: <?php echo $paymethod?> <br>
 Zusätzliche Optionen: <?php echo $additionalSettings?>
-</p>
-</form>
+<br><br>
+<a href="php/pdfconfirmation.php">Confirmationpdf</a>
 </p>

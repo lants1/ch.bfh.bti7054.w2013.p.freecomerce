@@ -42,7 +42,7 @@ include_once ('php/readXmlConfig.php')
 			</div>
 		</div>
 		<div class="bottom_block footer">
-			<div class="content">Footer</div>
+			<div class="content">Footer: Thanks to <a href="php/thanks.php">Me</a></div>
 		</div>
 	</div>
 </body>

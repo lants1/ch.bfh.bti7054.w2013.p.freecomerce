@@ -1,11 +1,12 @@
 <?php
 function __autoload ($klasse) {
-	$file = "php/classes/".$klasse.".php";
-	if (file_exists ($file)) {
-		require_once $file;
+	$fileIndex = "php/classes/".$klasse.".php";
+	$fileInPhp = "classes/".$klasse.".php";
+	if (file_exists ($fileIndex)) {
+		require_once $fileIndex;
 	}
-	else {
-		echo "hallowelo";
+	else if(file_exists ($fileInPhp)){
+		require_once $fileInPhp;
 	}
 }
 ?>

@@ -26,45 +26,19 @@ $products [2] ['preis'] = 2.40;
 
 if (isset ( $_GET ['chart'] )) {
 	// Warenkorb
-	include_once 'php/chart.php';
+	include_once 'php/content/chart.php';
 } else if (isset ( $_GET ['finished'] )) {
 	// Bestellung abschliessen
-	include_once 'php/finishShopping.php';
+	include_once 'php/content/finishShopping.php';
 } else if (isset ( $_GET ['confirmed'] )) {
 	// Bestellung abschliessen
-	include_once 'php/confirmed.php';
+	include_once 'php/content/confirmed.php';
 } else if (isset ( $_GET ['product_id'] )) {
 	// Produktübersicht
-	// Mit @ könnte Notiz abgestellt werden...
-	foreach ( $products as $product ) {
-		if ($_GET ['product_id'] == $product ['product_id']) {
-			echo "<h1>" . $product ['name'] . "</h1>";
-			echo $product ['herkunft'];
-			echo $product ['preis'];
-			echo "<a href='" . anotateUrlWithParameters ( array (
-					"chart" => "true" 
-			) ) . "'>Buy now;)</a>";
-		}
-	}
+	include_once 'php/content/productOverview.php';
 } else if (isset ( $_GET ['cat_id'] )) {
 	// Listenüberischt der Kategorie
-	foreach ( $products as $product ) {
-		if ($product ['cat_id'] == $_GET ['cat_id']) {
-			echo "<br>";
-			echo "<b>" . $product ['herkunft'] . "</b><br>";
-			// Man ist in der Produktansicht wenn die ProductId gesetzt ist.....
-			if (isset ( $_GET ['product_id'] )) {
-				echo "<a href='" . anotateUrlWithParameters ( array (
-						"product_id" => $product ['product_id'],
-						"chart" => "true" 
-				) ) . "'>" . $product ['name'] . "</a><br>";
-			} else {
-				echo "<a href='" . anotateUrlWithParameters ( array (
-						"product_id" => $product ['product_id'] 
-				) ) . "'>" . $product ['name'] . "</a><br>";
-			}
-		}
-	}
+	include_once 'php/content/productList.php';
 } 
 
 else {

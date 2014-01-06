@@ -19,7 +19,7 @@ xmlhttp.onreadystatechange=function()
     document.getElementById("status").innerHTML=xmlhttp.responseText;
     }
   };
-xmlhttp.open("POST","php/newCustomerCheck.php",true);
+xmlhttp.open("POST","php/helperservices/newCustomerCheck.php",true);
 xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 xmlhttp.send("lastname="+encodeURIComponent(lastname.value));
 document.getElementById("status").innerHTML="Checking...";

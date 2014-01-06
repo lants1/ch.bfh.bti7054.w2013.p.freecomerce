@@ -5,9 +5,9 @@
 *
 * @author lants1
 */
-include_once ('php/loadclasses.php');
-include_once ('php/language.php');
-include_once ('php/readXmlConfig.php')
+include_once ('php/helperservices/loadclasses.php');
+include_once ('php/helperservices/language.php');
+include_once ('php/helperservices/readXmlConfig.php')
 ?>
 <!DOCTYPE html>
 <html>
@@ -28,7 +28,7 @@ include_once ('php/readXmlConfig.php')
 					<a href="<?php echo $_SERVER['PHP_SELF']."?chart=true"?>"><img
 						src="gfx/cart.png" alt="Warenkorb" height="32" width="32"/></a>
 				<?php languageChangeDialog();?>
-				<?php include ('php/usersession.php'); ?>
+				<?php include ('php/helperservices/usersession.php'); ?>
 			</div>
 			</div>
 		</div>
@@ -37,18 +37,18 @@ include_once ('php/readXmlConfig.php')
 		<div class="left_block navigation">
 			<div class="content">
 				<span id="<?php if($xml->blink=="true") {echo "blink";};?>" style="visibility: visible;">Navigation </span>
-			<?php include("php/nav.php"); ?>
+			<?php include("php/content/nav.php"); ?>
 			</div>
 		</div>
 		<!-- Content is placed here-->
 		<div class="content">
-			<?php include("php/content.php"); ?>
+			<?php include("php/contentHandler.php"); ?>
 		</div>
 		<!-- Advertisment-->
 		<div class="bottom_block_adv advertisement">
 			<div class="content">
 			Advertisement
-			<?php include("php/adv.php"); ?>
+			<?php include("php/content/adv.php"); ?>
 			</div>
 		</div>
 		<!-- Page footer -->

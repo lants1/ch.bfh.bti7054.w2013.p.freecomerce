@@ -4,7 +4,7 @@
 *
 * @author lants1
 */
-include_once ('php/urlhelper.php');
+include_once ('urlhelper.php');
 
 // default language Setting...
 $languageSetting = 'de';

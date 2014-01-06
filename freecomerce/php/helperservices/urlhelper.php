@@ -22,8 +22,8 @@ function anotateUrlWithParameters($field) {
 		$url = addParam ( $url, "chart", "true" );
 	}
 	
-	if (isset ( $attr ["product_id"] )) {
-		$product_id = $attr ["product_id"];
+	if (isset ( $field ["product_id"] )) {
+		$product_id = $field ["product_id"];
 	} else {
 		$product_id = getParam ( "product_id", 1 );
 	}

@@ -7,7 +7,7 @@
 
 // Via Userclass die DB Abfrage machen...
 $cat = new Category();
-$linksFromDb = $cat->getCategories();
+$linksFromDb = $cat->getCategories($languageSetting);
 
 
 // Task 5.2 Gebe jeder Seite eine ID...

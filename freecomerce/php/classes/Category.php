@@ -43,12 +43,12 @@ class Category extends mysqli{
 	 *   	
 	 * @return mixed
 	 */
-	public function getCategories() {
+	public function getCategories($lang) {
 		$result = $this->query ( "SELECT * FROM categorie");
 		$links[] = array();
 		while($row = $result->fetch_assoc()){
 			$newdata['cat_id'] = $row['categorie_id'];
-			$newdata['link'] =  $row['text_de'];
+			$newdata['link'] =  $row['text_'.$lang];
 			$links[] = $newdata;
 		}
 		return $links;

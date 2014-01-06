@@ -1,6 +1,6 @@
 <?php
 /**
- * User class with db functionality....
+ * PHP Representation of user table....
  *
  */
 class User extends mysqli {

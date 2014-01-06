@@ -1,4 +1,9 @@
 <?php
+/**
+* Implementation for the language change
+*
+* @author lants1
+*/
 include_once ('php/urlhelper.php');
 
 // default language Setting...

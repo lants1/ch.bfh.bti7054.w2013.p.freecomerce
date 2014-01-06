@@ -1,4 +1,9 @@
 <?php
+/**
+* Check's if a customer is already know according to the $_POST['lastnam'] variable
+*
+* @author lants1
+*/
 include_once ('loadclasses.php');
 // Prüft ob der Kunde bereits im Shop bekannt ist...
 // Backend für AJAX Feature aus Task 12.2

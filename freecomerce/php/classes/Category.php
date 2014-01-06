@@ -1,4 +1,9 @@
 <?php
+/**
+* PHP-Representation of a tea category like greentea...
+*
+* @author lants1
+*/
 class Category {
 	private $cat_id = 0;
 	private $text_de = "";

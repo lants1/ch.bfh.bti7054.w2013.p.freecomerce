@@ -1,4 +1,10 @@
 <?php
+/**
+* Generates a page for finish the shopping and order the products...
+*
+* @author lants1
+*/
+
 $additionalSettings = $_GET ['additionalSettings'];
 $paymethod = $_GET ['paymethod'];
 ?>

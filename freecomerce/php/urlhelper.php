@@ -1,4 +1,10 @@
 <?php
+/**
+* Urlhelper should elimnate overhead in creating url links and simplifies
+* the get-parameter handling.
+*
+* @author lants1
+*/
 // TODO LAN Url Helper fertig machen und im ganzen Projekt integrieren...
 
 // Wechsle den getParameter vom übergebenen Feld

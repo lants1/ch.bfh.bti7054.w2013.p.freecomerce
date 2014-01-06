@@ -1,4 +1,10 @@
 <?php
+/**
+* Starts a usersession and shows the coresponding login dialog.
+*
+*
+* @author lants1
+*/
 session_start ();
 if (isset ( $_POST ['username'] ) && isset ( $_POST ['password'] )) {
 	$_SESSION ['login'] = true;

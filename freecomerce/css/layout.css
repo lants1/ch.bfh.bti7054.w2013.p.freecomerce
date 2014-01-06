@@ -1,3 +1,8 @@
+/**    
+* CSS Layout for the freecomerce webpage
+*
+* @author lants1
+*/
 html, body {
 	margin: 0;
 	padding: 0;
@@ -90,7 +95,6 @@ html, body {
 	z-index: 2;
 	background-color: pink;
 }
-
 
 .advertisement {
 	width: 90%;

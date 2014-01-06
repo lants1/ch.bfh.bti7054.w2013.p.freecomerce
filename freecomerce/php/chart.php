@@ -1,4 +1,9 @@
 <?php
+/**
+* Generates content for the chart.
+*
+* @author lants1
+*/
 if (isset ( $_SESSION ['login'] )) {
 	// Warenkorb initialisieren in der Session
 	if (! isset ( $_SESSION ['chart'] )) {

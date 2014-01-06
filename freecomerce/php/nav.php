@@ -1,4 +1,9 @@
 <?php
+/**
+* Generates and displays the navigation menu for the page
+*
+* @author lants1
+*/
 
 // Task 5.2 Gebe jeder Seite eine ID...
 $links [0] ['cat_id'] = 1;

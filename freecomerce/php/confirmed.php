@@ -1,4 +1,10 @@
 <?php 
+/**
+* Generates content for the confirmation page..
+*
+* @author lants1
+*/
+
  // Formparameter hohlen...
  $country = getParam('country', "nicht angegeben");
  $firstname = $_GET['firstname'];

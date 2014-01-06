@@ -1,5 +1,9 @@
 <?php
-
+/**
+* Generates a pdf confirmation with the fpdf library
+* 
+* @lants1
+*/
 require("lib/fpdf17/fpdf.php");
 
 //Task 11 Rest Service Aufruf für Bitcoins inklusive Parsen der JSON Response...

@@ -1,4 +1,9 @@
 <?php
+/**
+* Contenthandler, defines the concret content for each page...
+*
+* @author lants1
+*/
 
 // Task 4.3 Quick and Dirty muss sowiso noch neuimplementiert werden via. DB
 $products[0]['product_id'] = 1;

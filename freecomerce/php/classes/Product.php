@@ -1,5 +1,10 @@
 <?php
-	class Product extends mysqli
+/**
+* PHP-Representation of a tea category like Noir-de-luxe...
+*
+* @author lants1
+*/
+class Product extends mysqli
 	{
 		private $prod_id = 0;
 		private $text_de = "";

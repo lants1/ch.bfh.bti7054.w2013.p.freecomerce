@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+Contains the complete configuration for the webshop
+@author lants1 
+-->
 <freecomerce>
+	<!-- enables the blink feature of the navigation bar description -->
 	<blink>true</blink>
 </freecomerce>

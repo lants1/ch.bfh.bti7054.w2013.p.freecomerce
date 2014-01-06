@@ -53,7 +53,7 @@ include_once ('php/helperservices/readXmlConfig.php')
 		</div>
 		<!-- Page footer -->
 		<div class="bottom_block footer">
-			<div class="content">Footer: Thanks to <a href="php/thanks.php">Me</a></div>
+			<div class="content">Footer: Thanks to <a href="php/content/thanks.php">Me</a></div>
 		</div>
 	</div>
 </body>

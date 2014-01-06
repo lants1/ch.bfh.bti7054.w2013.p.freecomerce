@@ -4,17 +4,10 @@
 *
 * @author lants1
 */
-class Category {
+class Category extends mysqli{
 	private $cat_id = 0;
 	private $text_de = "";
 	private $text_en = "";
-	
-	// Konstruktor
-	public function __construct($cat_id, $text_de, $text_en) {
-		$this->cat_Id = $cat_id;
-		$this->text_de = $text_de;
-		$this->text_en = $text_en;
-	}
 	
 	/**
 	 * Insert Category into DB...
@@ -36,18 +29,29 @@ class Category {
 	 * @param unknown $text_en
 	 */
 	public function updateCategory($cat_id, $text_de, $text_en) {
-		$query = "UPDATE categorie SET text_de='$text_de', text_en='$text_en' where cat_id = '$cat_id'";
-		$this->query ( $query );
+		$stmt = $mysqli->prepare("UPDATE categorie SET text_de = ?, text_en = ? WHERE cat_id = ?");
+		$stmt->bind_param('ssi',
+				$text_de,
+				$text_en,
+				$cat_id);
+		$stmt->execute();
+		$stmt->close();
 	}
 	
 	/**
 	 * Get all categories
-	 *
-	 * @param unknown $cat_id        	
+	 *   	
 	 * @return mixed
 	 */
 	public function getCategories() {
-		return $this->query ( "SELECT * FROM categorie");
+		$result = $this->query ( "SELECT * FROM categorie");
+		$links[] = array();
+		while($row = $result->fetch_assoc()){
+			$newdata['cat_id'] = $row['categorie_id'];
+			$newdata['link'] =  $row['text_de'];
+			$links[] = $newdata;
+		}
+		return $links;
 	}
 	
 	/**
@@ -56,7 +60,10 @@ class Category {
 	 * @param unknown $id        	
 	 */
 	public function deleteCategory($id) {
-		$this->query ( "DELETE FROM categorie WHERE cat_id = $id" );
+		$stmt = $mysqli->prepare("DELETE FROM categorie WHERE cat_id = ?");
+		$stmt->bind_param('i', $id);
+		$stmt->execute();
+		$stmt->close();
 	}
 	
 	/**

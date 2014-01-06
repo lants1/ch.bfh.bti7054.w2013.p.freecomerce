@@ -5,18 +5,25 @@
 * @author lants1
 */
 
+// Via Userclass die DB Abfrage machen...
+$cat = new Category();
+$linksFromDb = $cat->getCategories();
+
+
 // Task 5.2 Gebe jeder Seite eine ID...
-$links [0] ['cat_id'] = 1;
-$links [0] ['link'] = "?cat_id=1'>Schwarztee</a></div></li>";
+// Diese Umwandlung des Datenbankresultats wäre eigentlich nicht nötig, da
+// in Task 5.2 ein mehrdimensionales array verlangt wird lasse ich dies jedoch unrefactored...
+$links [0] ['cat_id'] = $linksFromDb[1]['cat_id'];
+$links [0] ['link'] = "?cat_id=1'>".utf8_encode($linksFromDb[1]['link'])."</a></div></li>";
 
-$links [1] ['cat_id'] = 2;
-$links [1] ['link'] = "?cat_id=2'>Weisstee</a></div></li>";
+$links [1] ['cat_id'] = $linksFromDb[2]['cat_id'];;
+$links [1] ['link'] = "?cat_id=2'>".utf8_encode($linksFromDb[2]['link'])."</a></div></li>";
 
-$links [2] ['cat_id'] = 3;
-$links [2] ['link'] = "?cat_id=3'>Gr&uuml;ntee</a></div></li>";
+$links [2] ['cat_id'] = $linksFromDb[3]['cat_id'];
+$links [2] ['link'] = "?cat_id=3'>".utf8_encode($linksFromDb[3]['link'])."</a></div></li>";
 
-$links [3] ['cat_id'] = 4;
-$links [3] ['link'] = "?cat_id=4'>Blautee</a></div></li>";
+$links [3] ['cat_id'] = $linksFromDb[4]['cat_id'];
+$links [3] ['link'] = "?cat_id=4'>".utf8_encode($linksFromDb[4]['link'])."</a></div></li>";
 
 // Task 5.1 ändere Design des Links für die aktuelle Seite
 // via PHP und CSS...

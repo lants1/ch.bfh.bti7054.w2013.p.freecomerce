@@ -18,7 +18,7 @@ function anotateUrlWithParameters($field) {
 		$cat_id = getParam ( "cat_id", 1 );
 	}
 	
-	if (!isset ( $attr ["chart"] )) {
+	if (isset ( $field ["chart"] )) {
 		$url = addParam ( $url, "chart", "true" );
 	}
 	

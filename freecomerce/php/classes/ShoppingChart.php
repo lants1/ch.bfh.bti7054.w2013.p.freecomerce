@@ -2,6 +2,7 @@
 /**
 * Representation of a shopping chart, the chart contains some products...
 *
+* @author lants1
 */
 class ShoppingChart {
 

@@ -2,6 +2,7 @@
 /**
  * PHP Representation of user table....
  *
+ * @author lants1
  */
 class User extends mysqli {
 	

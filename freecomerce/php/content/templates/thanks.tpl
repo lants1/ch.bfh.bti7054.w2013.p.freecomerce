@@ -1,3 +1,4 @@
+<!-- Template to demonstrate the themplate functionality with smarty -->
 <!DOCTYPE html>
 <html>
 <head>

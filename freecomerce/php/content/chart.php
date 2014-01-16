@@ -38,7 +38,11 @@ if (isset ( $_SESSION ['login'] )) {
 if (isset ( $_SESSION ['chart'] )) {
 	$cart = $_SESSION ['chart'];
 	foreach ( $cart->getProducts () as $product_id ) {
-		echo "<li>" . $product_id . "<a href='" . $_SERVER ['PHP_SELF'] . "?chart=true&todelete=true&product_id=" . $product_id . "'>del</a></li>";
+		foreach ( $products as $product ) {
+			if ($product_id == $product ['product_id']) {
+				echo "<li>" . $product ['name'] . "    <a href='" . $_SERVER ['PHP_SELF'] . "?chart=true&todelete=true&product_id=" . $product_id . "'>Produkt aus Warenkorb entfernen</a></li>";
+			}
+		}
 	}
 }
 ?>

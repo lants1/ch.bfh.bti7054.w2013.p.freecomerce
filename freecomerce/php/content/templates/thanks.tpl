@@ -17,7 +17,7 @@
 		<div class="background navigation"></div>
 		<div class="left_block navigation">
 			<div class="content">
-				<span id="blink" style="visibility: visible;">Navigation </span>
+				<span style="visibility: visible;">Navigation </span>
 			{$navigationText}
 			</div>
 		</div>

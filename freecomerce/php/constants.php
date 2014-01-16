@@ -1,4 +1,10 @@
 <?php
+/**
+ * According to Task 4.3 the products need to be in a 2d array...
+ * 
+ * @author lants1
+ * 
+ */
 // Task 4.3 Quick and Dirty muss sowiso noch neuimplementiert werden via. DB
 $products [0] ['product_id'] = 1;
 $products [0] ['name'] = "Noir d'Orange";

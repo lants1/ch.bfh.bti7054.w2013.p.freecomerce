@@ -1,4 +1,11 @@
 <?php
+/**
+ * Displayes a list of countries and under each country show the tea products according to the
+ * current categorie.
+ * 
+ * @author lants1
+ * 
+ */
 foreach ( $products as $product ) {
 	if ($product ['cat_id'] == $_GET ['cat_id']) {
 		echo "<br>";

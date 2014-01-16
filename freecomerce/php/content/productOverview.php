@@ -2,6 +2,7 @@
 /**
  * Content Page which displays a Product with its attributes
  *
+ * @author lants1
  */
 foreach ( $products as $product ) {
 	if ($_GET ['product_id'] == $product ['product_id']) {

@@ -3,6 +3,11 @@
 * Shows a thanks page with smarty-template engine.
 * This class fills the template (thanks.)
 *
+* It was one of the last tasks on the default project so
+* i didn't change my whole layout implementation and made
+* only a smarty sample.
+* 
+* @author lants1
 */
 date_default_timezone_set('Europe/Zurich');
 include('../lib/Smarty-3.1.16/libs/Smarty.class.php');

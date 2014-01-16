@@ -1,0 +1,17 @@
+--- Freecomerce Webshop ----
+---- @author lants1 --------
+##########################
+Used Technologies:
+##########################
+PHP5
+MySQL
+fpdf17 included in php/lib
+smarty-3.1.17 include in php/lib
+
+##########################
+Setup Environment
+##########################
+
+1. copy the whole project to your htdocs Folder of your Webserver
+2. setup the db with the scripts under freecomerce/db folder user: demo1 pw: demo1 db:freecomerce
+3. use a high quality browser and enjoy the shop:)

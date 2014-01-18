@@ -6,6 +6,7 @@
  * 
  */
 // Task 4.3 Quick and Dirty muss sowiso noch neuimplementiert werden via. DB
+// @deprecated >> only here to show how task 4.3 was implemented...
 $products [0] ['product_id'] = 1;
 $products [0] ['name'] = "Noir d'Orange";
 $products [0] ['cat_id'] = 1;

@@ -8,7 +8,7 @@ include_once ('../helperservices/loadclasses.php');
 // Prüft ob der Kunde bereits im Shop bekannt ist...
 // Backend für AJAX Feature aus Task 12.2
 $lastname=$_POST['lastname'];
-if(preg_match("/[^a-z0-9]/",$lastname))
+if(preg_match("/[^A-Za-z0-9]/",$lastname))
 {
 	print "<span style=\"color:red;\">Ungültige Zeichen gefunden...</span>";
 	exit;

@@ -5,5 +5,5 @@ Contains the complete configuration for the webshop
 -->
 <freecomerce>
 	<!-- enables the blink feature of the navigation bar description -->
-	<blink>true</blink>
+	<blink>false</blink>
 </freecomerce>

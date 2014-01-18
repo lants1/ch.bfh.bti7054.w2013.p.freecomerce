@@ -7,7 +7,7 @@
 
 include_once 'constants.php';
 
-if (isset ( $_GET ['chart'] )) {
+if (isset ( $_GET ['chart'] ) && $_GET ['chart']=="true") {
 	// Warenkorb
 	include_once 'php/content/chart.php';
 } else if (isset ( $_GET ['finished'] )) {

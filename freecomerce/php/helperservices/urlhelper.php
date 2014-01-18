@@ -15,17 +15,19 @@ function anotateUrlWithParameters($field) {
 	if (isset ( $attr ["cat_id"] )) {
 		$cat_id = $attr ["cat_id"];
 	} else {
-		$cat_id = getParam ( "cat_id", 1 );
+		$cat_id = getParam ( "cat_id", - 99 );
 	}
 	
 	if (isset ( $field ["chart"] )) {
-		$url = addParam ( $url, "chart", "true" );
+		$chart = $field ["chart"];
+	} else {
+		$chart = getParam ( "chart", "false" );
 	}
 	
 	if (isset ( $field ["product_id"] )) {
 		$product_id = $field ["product_id"];
 	} else {
-		$product_id = getParam ( "product_id", 1 );
+		$product_id = getParam ( "product_id", - 99 );
 	}
 	
 	if (isset ( $field ["lang"] )) {
@@ -33,8 +35,16 @@ function anotateUrlWithParameters($field) {
 	} else {
 		$languageSetting = getParam ( "lang", "de" );
 	}
-	$url = addParam ( $url, "cat_id", $cat_id );
-	$url = addParam ( $url, "product_id", $product_id );
+	
+	if ($cat_id != - 99) {
+		$url = addParam ( $url, "cat_id", $cat_id );
+	}
+	if ($product_id != - 99) {
+		$url = addParam ( $url, "product_id", $product_id );
+	}
+	//if ($chart == "true") {
+		$url = addParam ( $url, "chart", $chart );
+	//}
 	$url = addParam ( $url, "lang", $languageSetting );
 	
 	return $url;

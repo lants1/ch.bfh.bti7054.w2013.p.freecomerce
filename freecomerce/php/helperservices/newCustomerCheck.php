@@ -18,8 +18,17 @@ if(preg_match("/[^A-Za-z0-9]/",$lastname))
 $user = new User();
 $statement = $user->getCustomer($lastname);
 
+
+$statement->bind_result($output);
+
+$hasResults=false;
+while($statement->fetch()){
+	$hasResults=true;
+}
+
+
 // wenn kein kunde gefunden wurde "Meldung" es freut uns neuer Kunde....
-if($statement->num_rows == 0)
+if($hasResults)
 {
 	print "<span style=\"color:green;\">Es freut uns Sie als neuen Kunden begrüssen zu dürfen :)</span>";
 }
